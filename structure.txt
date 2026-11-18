@@ -1,0 +1,20 @@
+src/
+├── App.jsx              (routes uniquement)
+├── content.js           (textes et coordonnées)
+├── components/
+│   ├── Header.jsx
+│   ├── Footer.jsx
+│   ├── PageHead.jsx     (bandeau de titre et fil d'Ariane)
+│   ├── RouteMap.jsx     (carte animée de l'accueil)
+│   └── ui.jsx           (Wrap et Button)
+└── pages/
+    ├── Home.jsx
+    ├── About.jsx
+    ├── Activities.jsx
+    ├── Activity.jsx     (gabarit des 3 pôles)
+    ├── Projects.jsx
+    ├── Project.jsx      (gabarit des fiches projet)
+    ├── Partners.jsx
+    ├── Contact.jsx
+    ├── Legal.jsx        (mentions légales et confidentialité)
+    └── NotFound.jsx

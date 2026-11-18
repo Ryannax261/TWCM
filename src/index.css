@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply font-body bg-white text-ink antialiased; }
+h1, h2, h3 { @apply font-display; }
+:focus-visible { @apply outline outline-2 outline-offset-2 outline-sea; }
+::selection { background: #E3A81B; color: #10222E; }
+
+/* Animations : désactivées si l'utilisateur le demande dans son système */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes fade-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+  @keyframes float { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(24px, -28px); } }
+
+  .fade-up { animation: fade-up 0.8s ease both; animation-delay: var(--d, 0ms); }
+  .page-enter { animation: fade-up 0.5s ease both; }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; transition-delay: var(--d, 0ms); }
+  .reveal.in { opacity: 1; transform: none; }
+  .route-line { stroke-dasharray: 900; stroke-dashoffset: 900; animation: draw 2.4s ease-out forwards; }
+  .marquee-track { animation: marquee 32s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  .blob { animation: float 14s ease-in-out infinite; }
+}
+
+/* Motif de points discret pour les fonds sombres */
+.bg-grid { background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px); background-size: 28px 28px; }
