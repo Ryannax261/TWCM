@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 // Données non traduites (identiques dans toutes les langues).
 export const company = {
   name: 'TWCM',
-  email: 'twcm@gmail.com',
+  email: 'Twcm@gmail.com',
 }
 
 // Tout le texte du site est dans locales/fr.json et locales/en.json (clé « content »).
