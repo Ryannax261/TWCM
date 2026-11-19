@@ -5,8 +5,8 @@
 html { scroll-behavior: smooth; }
 body { @apply font-body bg-white text-ink antialiased; }
 h1, h2, h3 { @apply font-display; }
-:focus-visible { @apply outline outline-2 outline-offset-2 outline-sea; }
-::selection { background: #E3A81B; color: #10222E; }
+:focus-visible { @apply outline outline-2 outline-offset-2 outline-slate; }
+::selection { background: #F5AF19; color: #4A504E; }
 
 /* Animations : désactivées si l'utilisateur le demande dans son système */
 @media (prefers-reduced-motion: no-preference) {

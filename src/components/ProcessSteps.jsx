@@ -111,7 +111,7 @@ export default function ProcessSteps({ steps }) {
             className={`stepper-card ${Math.abs(d) === 1 ? 'cursor-pointer' : ''}`}
             style={{ '--mx': slot.mx, '--my': slot.my, '--dx': slot.dx, '--dy': slot.dy, '--s': slot.s, opacity: hidden ? 0 : slot.o, zIndex: 10 - Math.abs(d) }}
           >
-            <div className={`flex h-full flex-col justify-between rounded-3xl p-6 shadow-2xl ${warm ? 'bg-turmeric text-ink' : 'bg-sea text-white'}`}>
+            <div className={`flex h-full flex-col justify-between rounded-3xl p-6 shadow-2xl ${warm ? 'bg-accent text-ink' : 'bg-slate text-white'}`}>
               <StepIcon i={i} />
               <span className="font-display text-7xl font-bold leading-none">0{i + 1}</span>
             </div>

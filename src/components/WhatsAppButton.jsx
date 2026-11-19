@@ -22,11 +22,11 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noreferrer"
       aria-label={t('whatsapp.label')}
-      className={`fixed bottom-5 right-5 z-40 flex items-center gap-2.5 rounded-full bg-[#25D366] py-3 pl-3.5 pr-3.5 font-semibold text-ink shadow-xl transition-all duration-500 hover:bg-[#1ebe5b] hover:shadow-2xl sm:pr-5 ${show ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-6 opacity-0'}`}
+      className={`fixed bottom-5 right-5 z-40 flex items-center gap-2.5 rounded-full bg-accent py-3 pl-3.5 pr-3.5 font-semibold text-ink shadow-xl transition-all duration-500 hover:brightness-95 hover:shadow-2xl sm:pr-5 ${show ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-6 opacity-0'}`}
     >
       <span className="relative flex h-6 w-6 items-center justify-center">
         <span className="absolute inset-0 animate-ping rounded-full bg-white/60 motion-reduce:hidden" />
-        <svg viewBox="0 0 16 16" className="relative h-6 w-6 text-white" fill="currentColor" aria-hidden="true">
+        <svg viewBox="0 0 16 16" className="relative h-6 w-6 text-ink" fill="currentColor" aria-hidden="true">
           <path d={LOGO} />
         </svg>
       </span>

@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useContent } from '../content.js'
 import LanguageSwitcher from './LanguageSwitcher.jsx'
+import Logo from './Logo.jsx'
 
 
 const Chevron = ({ className = '' }) => (
@@ -48,14 +49,14 @@ export default function Header() {
   }, [open])
 
   const desk = ({ isActive }) =>
-    `flex items-center gap-1 rounded-full px-4 py-2 text-[15px] font-semibold transition-colors ${isActive ? 'bg-ink text-white' : 'text-ink/80 hover:bg-mist hover:text-ink'}`
+    `flex items-center gap-1 rounded-full px-4 py-2 text-[15px] font-semibold transition-colors ${isActive ? 'bg-accent text-ink' : 'text-white/85 hover:bg-white/10 hover:text-white'}`
 
   return (
-    <header className={`sticky top-0 z-30 border-b border-ink/10 transition-all duration-300 ${open ? 'bg-white' : scrolled ? 'bg-white/70 shadow-md backdrop-blur-lg' : 'bg-white'}`}>
+    <header className={`sticky top-0 z-30 border-b border-white/10 bg-ink transition-all duration-300 ${scrolled ? 'bg-ink/95 shadow-lg backdrop-blur-lg' : ''}`}>
       <div className={`mx-auto flex max-w-6xl items-center justify-between px-5 transition-all duration-300 ${scrolled ? 'py-2.5' : 'py-4'}`}>
         <Link to="/" className="flex items-baseline gap-3" aria-label={t('header.logoLabel')}>
-          <span className="font-display text-2xl font-bold tracking-tight">TWCM<span className="text-turmeric">.</span></span>
-          <span className="hidden text-[11px] font-semibold uppercase tracking-[0.2em] text-ink/45 xl:inline">{t('header.tagline')}</span>
+          <Logo compact className="text-white" />
+          <span className="hidden whitespace-nowrap text-[11px] font-semibold uppercase tracking-[0.2em] text-white/50 2xl:inline">{t('header.tagline')}</span>
         </Link>
 
         {/* Navigation ordinateur */}
@@ -78,7 +79,7 @@ export default function Header() {
                             <span className="block leading-snug">{s.label}</span>
                             {s.hint && <span className="block text-xs text-ink/50">{s.hint}</span>}
                           </span>
-                          <span aria-hidden="true" className="text-turmeric opacity-0 transition group-hover/item:translate-x-1 group-hover/item:opacity-100">→</span>
+                          <span aria-hidden="true" className="text-ink opacity-0 transition group-hover/item:translate-x-1 group-hover/item:opacity-100">→</span>
                         </NavLink>
                       </li>
                     ))}
@@ -87,7 +88,7 @@ export default function Header() {
               </div>
             )
           })}
-          <Link to="/contact" className="group ml-3 inline-flex items-center gap-2 rounded-full bg-turmeric px-5 py-2.5 text-[15px] font-semibold text-ink transition duration-300 hover:-translate-y-0.5 hover:bg-ink hover:text-white hover:shadow-lg">
+          <Link to="/contact" className="group ml-3 inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-[15px] font-semibold text-ink whitespace-nowrap transition duration-300 hover:-translate-y-0.5 hover:bg-slate hover:text-white hover:shadow-lg">
             {t('ui.contactUs')} <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span>
           </Link>
           <LanguageSwitcher className="ml-3" />
@@ -96,43 +97,43 @@ export default function Header() {
         {/* Bouton menu mobile */}
         <button className="relative h-10 w-10 md:hidden" aria-label={open ? t('header.closeMenu') : t('header.openMenu')} aria-expanded={open} aria-controls="menu-mobile" onClick={() => setOpen(!open)}>
           <span className="absolute left-2 top-2.5 block h-5 w-6">
-            <span className={`absolute left-0 block h-0.5 w-6 rounded bg-ink transition-all duration-300 ${open ? 'top-[9px] rotate-45' : 'top-[2px]'}`} />
-            <span className={`absolute left-0 top-[9px] block h-0.5 w-6 rounded bg-ink transition-opacity duration-200 ${open ? 'opacity-0' : ''}`} />
-            <span className={`absolute left-0 block h-0.5 w-6 rounded bg-ink transition-all duration-300 ${open ? 'top-[9px] -rotate-45' : 'top-[16px]'}`} />
+            <span className={`absolute left-0 block h-0.5 w-6 rounded bg-white transition-all duration-300 ${open ? 'top-[9px] rotate-45' : 'top-[2px]'}`} />
+            <span className={`absolute left-0 top-[9px] block h-0.5 w-6 rounded bg-white transition-opacity duration-200 ${open ? 'opacity-0' : ''}`} />
+            <span className={`absolute left-0 block h-0.5 w-6 rounded bg-white transition-all duration-300 ${open ? 'top-[9px] -rotate-45' : 'top-[16px]'}`} />
           </span>
         </button>
       </div>
 
       {/* Navigation mobile */}
-      <nav id="menu-mobile" aria-label={t('header.mobileNav')} className={`absolute left-0 top-full max-h-[calc(100vh-4rem)] w-full overflow-y-auto border-b border-ink/10 bg-white px-5 pb-6 pt-2 shadow-xl transition-all duration-300 md:hidden ${open ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0'}`}>
+      <nav id="menu-mobile" aria-label={t('header.mobileNav')} className={`absolute left-0 top-full max-h-[calc(100vh-4rem)] w-full overflow-y-auto border-b border-white/10 bg-ink px-5 pb-6 pt-2 shadow-xl transition-all duration-300 md:hidden ${open ? 'visible translate-y-0 opacity-100' : 'invisible -translate-y-2 opacity-0'}`}>
         {nav.map((n) => {
           const sub = submenus[n.to]
           const isOpen = expanded === n.to
           return (
-            <div key={n.to} className="border-b border-ink/10">
+            <div key={n.to} className="border-b border-white/10">
               <div className="flex items-center justify-between">
-                <NavLink to={n.to} end={n.to === '/'} className={({ isActive }) => `flex-1 py-4 font-display text-xl font-bold ${isActive ? 'text-sea' : ''}`}>{n.label}</NavLink>
+                <NavLink to={n.to} end={n.to === '/'} className={({ isActive }) => `flex-1 py-4 font-display text-xl font-bold text-white ${isActive ? 'text-accent' : ''}`}>{n.label}</NavLink>
                 {sub && (
-                  <button aria-label={t('header.showPages', { label: n.label })} aria-expanded={isOpen} onClick={() => setExpanded(isOpen ? '' : n.to)} className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-mist">
+                  <button aria-label={t('header.showPages', { label: n.label })} aria-expanded={isOpen} onClick={() => setExpanded(isOpen ? '' : n.to)} className="flex h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white/10">
                     <Chevron className={`h-5 w-5 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
                   </button>
                 )}
               </div>
               {sub && (
-                <ul className={`ml-1 overflow-hidden border-l-2 border-turmeric pl-4 transition-all duration-300 ${isOpen ? 'mb-3 max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                  {sub.map((s) => <li key={s.to}><NavLink to={s.to} className="block py-2.5 text-ink/80 hover:text-sea">{s.label}</NavLink></li>)}
+                <ul className={`ml-1 overflow-hidden border-l-2 border-white/30 pl-4 transition-all duration-300 ${isOpen ? 'mb-3 max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                  {sub.map((s) => <li key={s.to}><NavLink to={s.to} className="block py-2.5 text-white/80 hover:text-accent">{s.label}</NavLink></li>)}
                 </ul>
               )}
             </div>
           )
         })}
-        <Link to="/contact" className="mt-6 flex items-center justify-center gap-2 rounded-full bg-turmeric px-6 py-3.5 text-lg font-semibold text-ink">
+        <Link to="/contact" className="mt-6 flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 text-lg font-semibold text-ink">
           {t('ui.contactUs')} <span aria-hidden="true">→</span>
         </Link>
         <LanguageSwitcher className="mt-5" />
       </nav>
 
-      <div aria-hidden="true" className="absolute bottom-0 left-0 h-0.5 bg-turmeric" style={{ width: `${progress}%` }} />
+      <div aria-hidden="true" className="absolute bottom-0 left-0 h-0.5 bg-accent" style={{ width: `${progress}%` }} />
     </header>
   )
 }

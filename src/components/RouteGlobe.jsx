@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import Globe from 'react-globe.gl'
 
-const GOLD = '#f5af19'
-const GOLD_DOTS = 'rgba(214,190,120,0.75)'
-const GLOBE_COLOR = '#0a2a22'
-const ATMOSPHERE = '#3f7a5f'
+const GOLD = '#f5af19' // trait principal : or
+const GOLD_DOTS = 'rgba(214,190,120,0.75)' // points des terres
+const GLOBE_COLOR = '#353A38'
+const ATMOSPHERE = '#AFB2B1'
 
 // Points (lat, lng)
 // side : côté du libellé par rapport à la pastille (évite le chevauchement Maurice / Madagascar)
@@ -14,7 +14,7 @@ const PLACES = [
   { id: 'madagascar', name: 'Madagascar', lat: -18.9, lng: 47.5, kind: 'place', side: 'left' },
 ]
 const PLACE = Object.fromEntries(PLACES.map((p) => [p.id, p]))
-const OCEAN = { id: 'ocean', name: 'Océan Indien', lat: -10, lng: 75, kind: 'sea' }
+const OCEAN = { id: 'ocean', name: 'Océan Indien', lat: -10, lng: 75, kind: 'slate' }
 const LABELS = [...PLACES, OCEAN]
 
 // Trajet : Asie -> Maurice, puis Maurice -> Madagascar
@@ -53,12 +53,12 @@ function createLabel(d) {
   const el = document.createElement('div')
   el.style.pointerEvents = 'none'
   el.style.whiteSpace = 'nowrap'
-  el.style.fontFamily = "'Cormorant Garamond', Georgia, serif"
-  if (d.kind === 'sea') {
+  el.style.fontFamily = "'Montserrat', system-ui, sans-serif"
+  if (d.kind === 'slate') {
     el.innerHTML = `<span style="display:inline-block;transform:translate(-50%,-50%);color:rgba(255,255,255,.8);font-style:italic;font-size:15px;letter-spacing:.05em;text-shadow:0 1px 4px rgba(0,0,0,.6)">${d.name}</span>`
   } else {
     const dot = `<span style="width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid ${GOLD};box-sizing:border-box;flex:none"></span>`
-    const name = `<span style="background:rgba(16,34,46,.72);color:#fff;padding:2px 8px;border-radius:4px;font-size:15px;font-weight:600">${d.name}</span>`
+    const name = `<span style="background:rgba(53,58,56,.8);color:#fff;padding:2px 8px;border-radius:4px;font-size:15px;font-weight:600">${d.name}</span>`
     // Libellé à droite : pastille puis nom. À gauche : nom puis pastille, décalé de sa largeur.
     const left = d.side === 'left'
     el.innerHTML = `<div style="display:flex;align-items:center;gap:6px;flex-direction:${left ? 'row-reverse' : 'row'};transform:translate(${left ? 'calc(-100% + 6px)' : '-6px'},-50%)">${dot}${name}</div>`
@@ -68,11 +68,11 @@ function createLabel(d) {
 
 const buttonStyle = {
   border: `1px solid ${GOLD}`,
-  background: 'rgba(16,34,46,.55)',
+  background: 'rgba(53,58,56,.6)',
   color: '#fff',
   padding: '6px 14px',
   borderRadius: 999,
-  fontFamily: "'Cormorant Garamond', Georgia, serif",
+  fontFamily: "'Montserrat', system-ui, sans-serif",
   fontSize: 15,
   cursor: 'pointer',
 }
@@ -117,7 +117,7 @@ export default function RouteGlobe() {
     const link = document.createElement('link')
     link.id = 'route-globe-font'
     link.rel = 'stylesheet'
-    link.href = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap'
+    link.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap'
     document.head.appendChild(link)
   }, [])
 
@@ -166,7 +166,7 @@ export default function RouteGlobe() {
         width: '100%',
         height: 'clamp(360px, 60vh, 560px)',
         overflow: 'hidden',
-        background: 'radial-gradient(circle at 50% 45%, #174237 0%, #0b1f1a 75%)',
+        background: 'radial-gradient(circle at 50% 45%, #5C6361 0%, #353A38 75%)',
         cursor: dragging ? 'grabbing' : 'grab',
         userSelect: 'none',
       }}
@@ -202,7 +202,7 @@ export default function RouteGlobe() {
           ringRepeatPeriod={1400}
           htmlElementsData={LABELS}
           htmlElement={createLabel}
-          htmlAltitude={(d) => (d.kind === 'sea' ? 0 : 0.03)}
+          htmlAltitude={(d) => (d.kind === 'slate' ? 0 : 0.03)}
         />
       )}
 
@@ -228,7 +228,7 @@ export default function RouteGlobe() {
           type="button"
           onClick={() => setPaused((v) => !v)}
           aria-pressed={paused}
-          style={{ ...buttonStyle, background: paused ? GOLD : 'rgba(16,34,46,.55)', color: paused ? '#10222E' : '#fff' }}
+          style={{ ...buttonStyle, background: paused ? GOLD : 'rgba(53,58,56,.6)', color: paused ? '#4A504E' : '#fff' }}
         >
           {paused ? 'Reprendre' : 'Pause'}
         </button>

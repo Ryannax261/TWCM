@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 export const Wrap = ({ children, className = '' }) => <div className={`mx-auto max-w-6xl px-5 ${className}`}>{children}</div>
 
 export const Button = ({ to, children, dark }) => (
-  <Link to={to} className={`group inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition duration-300 hover:-translate-y-0.5 hover:shadow-lg ${dark ? 'bg-white text-ink hover:bg-turmeric' : 'bg-ink text-white hover:bg-sea'}`}>
+  <Link to={to} className={`group inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold transition duration-300 hover:-translate-y-0.5 hover:shadow-lg ${dark ? 'bg-accent text-ink hover:bg-white' : 'bg-ink text-white hover:bg-slate'}`}>
     {children}
     <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span>
   </Link>
@@ -14,9 +14,9 @@ export const Button = ({ to, children, dark }) => (
 export const CardLink = ({ to, children, label }) => {
   const { t } = useTranslation()
   return (
-  <Link to={to} className="group flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-turmeric hover:shadow-xl">
+  <Link to={to} className="group flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-accent hover:shadow-xl">
     {children}
-    <span className="mt-auto inline-flex items-center gap-2 pt-5 font-semibold text-sea">
+    <span className="mt-auto inline-flex items-center gap-2 pt-5 font-semibold text-slate">
       {label ?? t('ui.discover')} <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span>
     </span>
   </Link>

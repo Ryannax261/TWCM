@@ -18,7 +18,7 @@ export default function App() {
   const { t } = useTranslation()
   return (
     <>
-      <a href="#contenu" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-turmeric focus:px-4 focus:py-2 focus:text-ink">{t('ui.skip')}</a>
+      <a href="#contenu" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-accent focus:px-4 focus:py-2 focus:text-ink">{t('ui.skip')}</a>
       <Header />
       <main id="contenu" key={pathname} className="page-enter">
         <Routes>

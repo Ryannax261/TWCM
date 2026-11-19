@@ -21,7 +21,7 @@ export default function Projects() {
         <div className="flex flex-wrap gap-2" role="group" aria-label={t('projects.filterLabel')}>
           {poles.map((p) => (
             <button key={p} onClick={() => setPole(p)} aria-pressed={active === p}
-              className={`rounded-full border px-5 py-2 text-sm transition ${active === p ? 'border-ink bg-ink text-white' : 'border-ink/20 hover:border-ink'}`}>{p === ALL ? t('projects.all') : p}</button>
+              className={`rounded-full border px-5 py-2 text-sm transition ${active === p ? 'border-ink bg-ink text-white' : 'border-ink/20 hover:border-accent'}`}>{p === ALL ? t('projects.all') : p}</button>
           ))}
         </div>
         <div className="mt-8 grid gap-6 md:grid-cols-2">

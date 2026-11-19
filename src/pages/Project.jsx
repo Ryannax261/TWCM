@@ -17,11 +17,11 @@ export default function Project() {
     <>
       <PageHead crumbs={[[t('projects.crumb'), '/realisations'], [p.title]]} title={p.title} intro={`${p.pole}, ${p.country}`} />
 
-      <Wrap className="grid gap-6 py-16 md:grid-cols-3">
-        {[[t('project.context'), p.context], [t('project.mission'), p.mission], [t('project.result'), p.result]].map(([h, t], i) => (
+      <Wrap className="grid gap-6 py-16 md:grid-cols-2">
+        {[[t('project.context'), p.context], [t('project.mission'), p.mission]].map(([h, t], i) => (
           <Reveal key={h} delay={i * 120}>
-            <section className="h-full rounded-2xl border border-ink/10 p-7 transition duration-300 hover:-translate-y-1 hover:border-turmeric hover:shadow-xl">
-              <span className="font-display text-4xl font-bold text-turmeric">0{i + 1}</span>
+            <section className="h-full rounded-2xl border border-ink/10 p-7 transition duration-300 hover:-translate-y-1 hover:border-accent hover:shadow-xl">
+              <span className="font-display text-4xl font-bold text-ink">0{i + 1}</span>
               <h2 className="mt-3 text-2xl font-bold">{h}</h2>
               <p className="mt-3 text-ink/75">{t}</p>
             </section>

@@ -14,7 +14,7 @@ export default function Activities() {
         {activities.map((a, i) => (
           <Reveal key={a.slug} delay={i * 120}>
             <CardLink to={`/activites/${a.slug}`}>
-              <span className="font-display text-4xl font-bold text-turmeric">0{i + 1}</span>
+              <span className="font-display text-4xl font-bold text-ink">0{i + 1}</span>
               <h2 className="mt-3 text-xl font-bold">{a.title}</h2>
               <p className="mt-3 text-ink/75">{a.intro}</p>
             </CardLink>

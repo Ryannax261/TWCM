@@ -55,9 +55,7 @@
       "Madagascar",
       "Asie"
     ],
-    "missionValues": "Mission et valeurs",
-    "team": "Équipe dirigeante",
-    "teamTodo": "Photo, nom, fonction et courte biographie de chaque membre : à compléter."
+    "missionValues": "Mission et valeurs"
   },
   "activities": {
     "crumb": "Activités",
@@ -227,8 +225,7 @@
         "pole": "Conseil en business",
         "country": "Madagascar",
         "context": "Un projet d’électrification nécessitait une équipe structurée et un pilotage rigoureux.",
-        "mission": "Assistance RH et management, puis réalisation du projet.",
-        "result": "Résultats et photos à compléter."
+        "mission": "Assistance RH et management, puis réalisation du projet."
       },
       {
         "slug": "madagascar",
@@ -236,8 +233,7 @@
         "pole": "Conseil en business",
         "country": "Madagascar",
         "context": "Un investisseur souhaitait évaluer une implantation à Madagascar.",
-        "mission": "Étude d’investissement, puis gestion de projet.",
-        "result": "Résultats à compléter."
+        "mission": "Étude d’investissement, puis gestion de projet."
       }
     ],
     "partners": [
@@ -246,12 +242,16 @@
         "text": "Partenaire pour les solutions et équipements électriques."
       },
       {
-        "name": "Chines Company",
+        "name": "China Juyou Electric Machinery Trading Limited",
         "text": "Partenaire industriel en Chine."
       },
       {
-        "name": "Top Level Management",
-        "text": "Cadre supérieur ou Entreprise stratégique."
+        "name": "NANO-STAR (Chengdu) Technology Co., Ltd",
+        "text": "Partenaire industriel en Chine."
+      },
+      {
+        "name": "Anhui Zhongjuyou Motor Equipment Co., Ltd",
+        "text": "Partenaire industriel en Chine."
       }
     ],
     "values": [
@@ -279,6 +279,40 @@
       {
         "title": "Livraison",
         "text": "Vos marchandises arrivent chez vous, à Maurice ou à Madagascar."
+      }
+    ],
+    "missionValues": [
+      {
+        "title": "Intégrité",
+        "text": "nous agissons avec honnêteté et transparence dans chaque transaction, avec nos clients, nos fournisseurs et les autorités."
+      },
+      {
+        "title": "Fiabilité",
+        "text": "nous respectons nos engagements de qualité, de délais et de quantités. Notre parole vaut contrat."
+      },
+      {
+        "title": "Réactivité",
+        "text": "nous saisissons les opportunités du marché et répondons vite aux besoins de nos partenaires."
+      },
+      {
+        "title": "Rigueur",
+        "text": "nous maîtrisons nos coûts, nos risques et notre conformité (douane, fiscalité, réglementation) dans chaque opération."
+      },
+      {
+        "title": "Esprit de partenariat",
+        "text": "nous construisons des relations durables, gagnant-gagnant, avec nos clients et nos fournisseurs."
+      },
+      {
+        "title": "Qualité",
+        "text": "nous sélectionnons des produits et des fournisseurs qui répondent aux standards attendus par nos clients."
+      },
+      {
+        "title": "Responsabilité",
+        "text": "nous privilégions un commerce éthique et respectueux de l’environnement et des communautés locales."
+      },
+      {
+        "title": "Excellence du service",
+        "text": "nous accompagnons nos clients de la commande à la livraison, avec un suivi personnalisé."
       }
     ]
   },

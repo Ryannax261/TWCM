@@ -3,7 +3,7 @@
 import { useTranslation } from 'react-i18next'
 import { LAND } from './landPath.js'
 
-const TURMERIC = '#E3A21A'
+const ROUTE = '#F5AF19' // or : tracé de la route
 
 // Route maritime : Canton, mer de Chine méridionale, détroit de Malacca,
 // sud du Sri Lanka, puis traversée de l'océan Indien jusqu'à Maurice.
@@ -25,7 +25,7 @@ function smooth(p) {
 }
 
 // Contour sombre autour du texte pour le lire même au-dessus des terres.
-const halo = { stroke: '#10222E', strokeWidth: 2, paintOrder: 'stroke', strokeLinejoin: 'round' }
+const halo = { stroke: '#353A38', strokeWidth: 2, paintOrder: 'stroke', strokeLinejoin: 'round' }
 const label = { fill: '#FFFFFF', fontSize: 8, fontWeight: 600, ...halo }
 
 export default function RouteMap() {
@@ -46,13 +46,13 @@ export default function RouteMap() {
       </text>
 
       {/* Routes : se dessinent l'une après l'autre (voir .route-line dans index.css) */}
-      <path className="route-line" pathLength="900" d={smooth(WAYPOINTS)} fill="none" stroke={TURMERIC} strokeWidth="1.6" strokeLinecap="round" />
-      <path className="route-line" pathLength="900" style={{ animationDelay: '2.4s' }} d="M243 268L214 263" fill="none" stroke={TURMERIC} strokeWidth="1.6" strokeLinecap="round" />
+      <path className="route-line" pathLength="900" d={smooth(WAYPOINTS)} fill="none" stroke={ROUTE} strokeWidth="1.6" strokeLinecap="round" />
+      <path className="route-line" pathLength="900" style={{ animationDelay: '2.4s' }} d="M243 268L214 263" fill="none" stroke={ROUTE} strokeWidth="1.6" strokeLinecap="round" />
 
       {/* Points */}
-      <circle cx="399" cy="122" r="4" fill="#FFFFFF" stroke={TURMERIC} strokeWidth="1.6" />
-      <circle cx="243" cy="268" r="3.2" fill="#FFFFFF" stroke={TURMERIC} strokeWidth="1.6" />
-      <circle cx="214" cy="263" r="3.2" fill="#FFFFFF" stroke={TURMERIC} strokeWidth="1.6" />
+      <circle cx="399" cy="122" r="4" fill="#FFFFFF" stroke={ROUTE} strokeWidth="1.6" />
+      <circle cx="243" cy="268" r="3.2" fill="#FFFFFF" stroke={ROUTE} strokeWidth="1.6" />
+      <circle cx="214" cy="263" r="3.2" fill="#FFFFFF" stroke={ROUTE} strokeWidth="1.6" />
 
       {/* Libellés */}
       <text x="399" y="111" textAnchor="middle" {...label}>{t('map.asia')}</text>

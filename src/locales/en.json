@@ -55,9 +55,7 @@
       "Madagascar",
       "Asia"
     ],
-    "missionValues": "Mission and values",
-    "team": "Leadership team",
-    "teamTodo": "Photo, name, role and short biography of each member: to be completed."
+    "missionValues": "Mission and values"
   },
   "activities": {
     "crumb": "Activities",
@@ -227,8 +225,7 @@
         "pole": "Business consulting",
         "country": "Madagascar",
         "context": "An electrification project needed a structured team and rigorous steering.",
-        "mission": "HR and management support, then project delivery.",
-        "result": "Results and photos to be added."
+        "mission": "HR and management support, then project delivery."
       },
       {
         "slug": "madagascar",
@@ -236,8 +233,7 @@
         "pole": "Business consulting",
         "country": "Madagascar",
         "context": "An investor wanted to assess setting up operations in Madagascar.",
-        "mission": "Investment study, then project management.",
-        "result": "Results to be added."
+        "mission": "Investment study, then project management."
       }
     ],
     "partners": [
@@ -246,12 +242,16 @@
         "text": "Partner for electrical solutions and equipment."
       },
       {
-        "name": "Chines Company",
+        "name": "China Juyou Electric Machinery Trading Limited",
         "text": "Industrial partner in China."
       },
       {
-        "name": "Top Level Management",
-        "text": "Senior executive or strategic company."
+        "name": "NANO-STAR (Chengdu) Technology Co., Ltd",
+        "text": "Industrial partner in China."
+      },
+      {
+        "name": "Anhui Zhongjuyou Motor Equipment Co., Ltd",
+        "text": "Industrial partner in China."
       }
     ],
     "values": [
@@ -279,6 +279,40 @@
       {
         "title": "Delivery",
         "text": "Your goods arrive at your door, in Mauritius or Madagascar."
+      }
+    ],
+    "missionValues": [
+      {
+        "title": "Integrity",
+        "text": "we act with honesty and transparency in every transaction, with our clients, suppliers and authorities."
+      },
+      {
+        "title": "Reliability",
+        "text": "we keep our commitments on quality, deadlines and quantities. Our word is our bond."
+      },
+      {
+        "title": "Responsiveness",
+        "text": "we seize market opportunities and quickly meet our partners’ needs."
+      },
+      {
+        "title": "Rigour",
+        "text": "we control our costs, risks and compliance (customs, taxation, regulations) in every operation."
+      },
+      {
+        "title": "Partnership spirit",
+        "text": "we build lasting, win-win relationships with our clients and suppliers."
+      },
+      {
+        "title": "Quality",
+        "text": "we select products and suppliers that meet the standards our clients expect."
+      },
+      {
+        "title": "Responsibility",
+        "text": "we favour ethical trade that respects the environment and local communities."
+      },
+      {
+        "title": "Service excellence",
+        "text": "we support our clients from order to delivery, with personalised follow-up."
       }
     ]
   },
