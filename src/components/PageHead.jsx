@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import { Wrap } from './ui.jsx'
 
 function Crumbs({ items }) {
+  const { t } = useTranslation()
   return (
-    <nav aria-label="Fil d’Ariane" className="text-sm text-white/60">
-      <Link to="/" className="hover:text-turmeric">Accueil</Link>
+    <nav aria-label={t('ui.breadcrumb')} className="text-sm text-white/60">
+      <Link to="/" className="hover:text-turmeric">{t('ui.home')}</Link>
       {items.map(([label, to]) => (
         <span key={label}> / {to ? <Link to={to} className="hover:text-turmeric">{label}</Link> : <span className="text-white">{label}</span>}</span>
       ))}

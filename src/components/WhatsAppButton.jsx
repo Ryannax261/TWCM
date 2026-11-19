@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { company } from '../content.js'
 
 // Logo WhatsApp : icône « whatsapp » de Bootstrap Icons (licence MIT).
@@ -7,6 +8,7 @@ const LOGO =
 
 // Apparaît après un peu de défilement.
 export default function WhatsAppButton() {
+  const { t } = useTranslation()
   const [show, setShow] = useState(false)
   useEffect(() => {
     const on = () => setShow(window.scrollY > 300)
@@ -19,7 +21,7 @@ export default function WhatsAppButton() {
       href={`https://wa.me/${company.whatsapp}`}
       target="_blank"
       rel="noreferrer"
-      aria-label="Écrire sur WhatsApp"
+      aria-label={t('whatsapp.label')}
       className={`fixed bottom-5 right-5 z-40 flex items-center gap-2.5 rounded-full bg-[#25D366] py-3 pl-3.5 pr-3.5 font-semibold text-ink shadow-xl transition-all duration-500 hover:bg-[#1ebe5b] hover:shadow-2xl sm:pr-5 ${show ? 'translate-y-0 opacity-100' : 'pointer-events-none translate-y-6 opacity-0'}`}
     >
       <span className="relative flex h-6 w-6 items-center justify-center">

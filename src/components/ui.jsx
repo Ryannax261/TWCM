@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 export const Wrap = ({ children, className = '' }) => <div className={`mx-auto max-w-6xl px-5 ${className}`}>{children}</div>
 
@@ -10,11 +11,14 @@ export const Button = ({ to, children, dark }) => (
 )
 
 // Carte cliquable avec effet de survol
-export const CardLink = ({ to, children, label = 'Découvrir' }) => (
+export const CardLink = ({ to, children, label }) => {
+  const { t } = useTranslation()
+  return (
   <Link to={to} className="group flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1.5 hover:border-turmeric hover:shadow-xl">
     {children}
     <span className="mt-auto inline-flex items-center gap-2 pt-5 font-semibold text-sea">
-      {label} <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span>
+      {label ?? t('ui.discover')} <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span>
     </span>
   </Link>
-)
+  )
+}

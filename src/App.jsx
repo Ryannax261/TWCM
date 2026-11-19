@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
-import WhatsAppButton from './components/WhatsAppButton.jsx'
+import { useTranslation } from 'react-i18next'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import Home from './pages/Home.jsx'
@@ -15,9 +15,10 @@ import NotFound from './pages/NotFound.jsx'
 
 export default function App() {
   const { pathname } = useLocation()
+  const { t } = useTranslation()
   return (
     <>
-      <a href="#contenu" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-turmeric focus:px-4 focus:py-2 focus:text-ink">Aller au contenu</a>
+      <a href="#contenu" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-turmeric focus:px-4 focus:py-2 focus:text-ink">{t('ui.skip')}</a>
       <Header />
       <main id="contenu" key={pathname} className="page-enter">
         <Routes>
@@ -29,13 +30,12 @@ export default function App() {
           <Route path="/realisations/:slug" element={<Project />} />
           <Route path="/partenaires" element={<Partners />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/mentions-legales" element={<Legal title="Mentions légales" />} />
-          <Route path="/confidentialite" element={<Legal title="Politique de confidentialité" />} />
+          <Route path="/mentions-legales" element={<Legal kind="legal" />} />
+          <Route path="/confidentialite" element={<Legal kind="privacy" />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
-      <WhatsAppButton />
     </>
   )
 }

@@ -27,3 +27,27 @@ h1, h2, h3 { @apply font-display; }
 
 /* Motif de points discret pour les fonds sombres */
 .bg-grid { background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px); background-size: 28px 28px; }
+
+/* Carrousel « Du fournisseur à la livraison » (ProcessSteps) */
+.stepper { --w: clamp(190px, 24vw, 260px); --h: calc(var(--w) * 1.25); }
+.stepper-card {
+  position: absolute; left: 50%; top: 40%;
+  width: var(--w); height: var(--h);
+  transform: translate(calc(-50% + var(--mx) * var(--w)), calc(-50% + var(--my) * var(--h))) scale(var(--s));
+  transition: transform 0.75s cubic-bezier(0.22, 0.8, 0.26, 1), opacity 0.6s ease;
+  will-change: transform, opacity;
+}
+.stepper-box { position: absolute; left: 0; right: 0; bottom: 6.25rem; padding: 0 1.5rem; text-align: center; display: grid; z-index: 20; }
+.stepper-caption { grid-area: 1 / 1; transition: opacity 0.5s ease, filter 0.5s ease; }
+.stepper-caption[data-on='false'] { opacity: 0; filter: blur(5px); pointer-events: none; }
+@media (min-width: 768px) {
+  .stepper-card { top: 46%; transform: translate(calc(-50% + var(--dx) * var(--w)), calc(-50% + var(--dy) * var(--h))) scale(var(--s)); }
+  .stepper-box {
+    left: calc(50% + var(--w) / 2 + 1.5rem); right: auto; bottom: auto; top: 46%;
+    width: min(280px, calc(50% - var(--w) / 2 - 2rem)); padding: 0; text-align: left;
+    transform: translateY(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stepper-card, .stepper-caption { transition-duration: 0.01s; }
+}

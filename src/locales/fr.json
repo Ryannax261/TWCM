@@ -1,0 +1,288 @@
+{
+  "ui": {
+    "skip": "Aller au contenu",
+    "home": "Accueil",
+    "discover": "Découvrir",
+    "contactUs": "Nous contacter",
+    "breadcrumb": "Fil d’Ariane",
+    "language": "Langue"
+  },
+  "header": {
+    "logoLabel": "TWCM, accueil",
+    "tagline": " Asie · Maurice · Madagascar",
+    "mainNav": "Navigation principale",
+    "mobileNav": "Navigation mobile",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "showPages": "Afficher les pages de {{label}}"
+  },
+  "footer": {
+    "about": "Société mauricienne. Trading, conseil et distribution entre l’Asie et l’océan Indien.",
+    "talk": "Parlons de votre projet",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "legal": "Mentions légales",
+    "privacy": "Confidentialité",
+    "top": "Haut de page ↑"
+  },
+  "home": {
+    "title": "De l’usine asiatique au client de l’<hl>océan Indien</hl>.",
+    "intro": "TWCM importe, conseille et distribue entre l’Asie, Maurice et Madagascar. Nos métiers :",
+    "words": [
+      "Trading",
+      "Conseil",
+      "Distribution"
+    ],
+    "ourActivities": "Nos activités",
+    "threeTrades": "Trois métiers, un même interlocuteur",
+    "supplierToDelivery": "Du fournisseur à la livraison",
+    "why": "Pourquoi travailler avec TWCM",
+    "achievements": "Réalisations",
+    "partners": "Nos partenaires",
+    "letsTalk": "Parlons de votre projet",
+    "stepPrev": "Étape précédente",
+    "stepNext": "Étape suivante",
+    "stepGo": "Aller à l’étape {{n}}"
+  },
+  "about": {
+    "crumb": "À propos",
+    "title": "Une société mauricienne tournée vers l’Asie et l’océan Indien",
+    "whoWeAre": "Qui sommes-nous",
+    "whoText": "TWCM est une société de droit mauricien. Elle intervient dans le trading, le conseil en business et la distribution d’équipements électriques.",
+    "zonesTitle": "Zones d’intervention",
+    "zones": [
+      "Maurice",
+      "Madagascar",
+      "Asie"
+    ],
+    "missionValues": "Mission et valeurs",
+    "team": "Équipe dirigeante",
+    "teamTodo": "Photo, nom, fonction et courte biographie de chaque membre : à compléter."
+  },
+  "activities": {
+    "crumb": "Activités",
+    "title": "Nos activités",
+    "intro": "Trois pôles complémentaires, un seul interlocuteur."
+  },
+  "activity": {
+    "whatWeDo": "Ce que nous faisons",
+    "method": "Notre méthode",
+    "ctaTitle": "Un projet en tête ?",
+    "ctaText": "Décrivez-nous votre besoin, nous revenons vers vous rapidement.",
+    "alsoDiscover": "Découvrir aussi"
+  },
+  "projects": {
+    "crumb": "Réalisations",
+    "title": "Nos réalisations",
+    "all": "Tous",
+    "filterLabel": "Filtrer par pôle"
+  },
+  "project": {
+    "context": "Contexte",
+    "mission": "Mission",
+    "result": "Résultats",
+    "next": "Réalisation suivante"
+  },
+  "partners": {
+    "crumb": "Partenaires",
+    "title": "Nos partenaires",
+    "become": "Vous souhaitez devenir partenaire de TWCM ?",
+    "writeUs": "Nous écrire"
+  },
+  "contact": {
+    "crumb": "Contact",
+    "title": "Contactez-nous",
+    "intro": "Une question, un devis, un projet : écrivez-nous.",
+    "eyebrow": "Écrivez-nous",
+    "heading": "Parlons de votre projet",
+    "sub": "Quelques lignes suffisent : nous revenons vers vous avec une réponse adaptée.",
+    "need": "Votre besoin",
+    "name": "Nom",
+    "company": "Société",
+    "country": "Pays",
+    "message": "Message",
+    "placeholder": "Décrivez votre besoin, vos quantités, vos délais…",
+    "privacy": "Vos informations servent uniquement à répondre à votre demande.",
+    "send": "Envoyer le message",
+    "sent": "Votre messagerie s’est ouverte pour envoyer le message.",
+    "mailSubject": "Demande via le site : {{need}}",
+    "mailName": "Nom",
+    "mailCompany": "Société",
+    "mailCountry": "Pays",
+    "mailNeed": "Besoin"
+  },
+  "legal": {
+    "legalTitle": "Mentions légales",
+    "privacyTitle": "Politique de confidentialité",
+    "todo": "Contenu juridique à compléter : dénomination, numéro d’enregistrement, siège, hébergeur du site et traitement des données personnelles."
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "text": "Cette adresse n’existe pas ou a changé.",
+    "back": "Retour à l’accueil"
+  },
+  "map": {
+    "aria": "Carte : route maritime de l’Asie vers l’île Maurice, puis Madagascar, dans l’océan Indien",
+    "ocean": "Océan Indien",
+    "asia": "Asie",
+    "mauritius": "Maurice",
+    "madagascar": "Madagascar"
+  },
+  "content": {
+    "nav": [
+      {
+        "to": "/",
+        "label": "Accueil"
+      },
+      {
+        "to": "/a-propos",
+        "label": "À propos"
+      },
+      {
+        "to": "/activites",
+        "label": "Activités"
+      },
+      {
+        "to": "/realisations",
+        "label": "Réalisations"
+      },
+      {
+        "to": "/partenaires",
+        "label": "Partenaires"
+      }
+    ],
+    "needs": [
+      {
+        "id": "trading",
+        "label": "Trading"
+      },
+      {
+        "id": "conseil",
+        "label": "Conseil"
+      },
+      {
+        "id": "distribution",
+        "label": "Distribution"
+      },
+      {
+        "id": "partenariat",
+        "label": "Partenariat"
+      }
+    ],
+    "activities": [
+      {
+        "slug": "trading",
+        "title": "Trading",
+        "cta": "Demander un devis",
+        "need": "trading",
+        "intro": "Nous achetons en Asie et livrons dans l’océan Indien : fournisseurs identifiés, prix négociés, marchandises contrôlées.",
+        "points": [
+          "Spécialisation Asie vers océan Indien",
+          "Familles de produits traitées"
+        ],
+        "steps": [
+          "Recherche de fournisseurs",
+          "Négociation",
+          "Contrôle qualité",
+          "Logistique",
+          "Livraison"
+        ]
+      },
+      {
+        "slug": "conseil",
+        "title": "Conseil en business",
+        "cta": "Prendre rendez-vous",
+        "need": "conseil",
+        "intro": "Nous accompagnons les dirigeants dans l’organisation de leurs équipes et dans la conduite de leurs projets.",
+        "points": [
+          "Assistance RH et management",
+          "Réalisation de projets : pilotage, suivi, livraison",
+          "Études d’investissement et gestion de projet"
+        ],
+        "steps": [
+          "Diagnostic",
+          "Plan d’action",
+          "Mise en œuvre",
+          "Suivi"
+        ]
+      },
+      {
+        "slug": "distribution",
+        "title": "Distribution d’équipements électriques",
+        "cta": "Demander une offre",
+        "need": "distribution",
+        "intro": "Nous fournissons du matériel électrique aux professionnels, aux collectivités et aux porteurs de projets.",
+        "points": [
+          "Gamme de matériel proposée",
+          "Marques distribuées, dont Holley Tech",
+          "Clients et zones desservis"
+        ],
+        "steps": []
+      }
+    ],
+    "projects": [
+      {
+        "slug": "electrification",
+        "title": "Projet d’électrification",
+        "pole": "Conseil en business",
+        "country": "Madagascar",
+        "context": "Un projet d’électrification nécessitait une équipe structurée et un pilotage rigoureux.",
+        "mission": "Assistance RH et management, puis réalisation du projet.",
+        "result": "Résultats et photos à compléter."
+      },
+      {
+        "slug": "madagascar",
+        "title": "Étude d’investissement à Madagascar",
+        "pole": "Conseil en business",
+        "country": "Madagascar",
+        "context": "Un investisseur souhaitait évaluer une implantation à Madagascar.",
+        "mission": "Étude d’investissement, puis gestion de projet.",
+        "result": "Résultats à compléter."
+      }
+    ],
+    "partners": [
+      {
+        "name": "Holley Tech",
+        "text": "Partenaire pour les solutions et équipements électriques."
+      },
+      {
+        "name": "Chines Company",
+        "text": "Partenaire industriel en Chine."
+      },
+      {
+        "name": "Top Level Management",
+        "text": "Cadre supérieur ou Entreprise stratégique."
+      }
+    ],
+    "values": [
+      "Rigueur dans le choix des fournisseurs",
+      "Transparence avec nos clients",
+      "Engagement jusqu’à la livraison"
+    ],
+    "parcours": [
+      {
+        "title": "Recherche de fournisseurs",
+        "text": "Nous identifions en Asie les fabricants et fournisseurs adaptés à votre besoin."
+      },
+      {
+        "title": "Négociation",
+        "text": "Nous négocions prix, quantités et conditions de livraison pour vous."
+      },
+      {
+        "title": "Contrôle qualité",
+        "text": "Nous vérifions la conformité des marchandises avant leur expédition."
+      },
+      {
+        "title": "Logistique",
+        "text": "Nous organisons le transport et les formalités jusqu’à l’océan Indien."
+      },
+      {
+        "title": "Livraison",
+        "text": "Vos marchandises arrivent chez vous, à Maurice ou à Madagascar."
+      }
+    ]
+  },
+  "whatsapp": {
+    "label": "Écrire sur WhatsApp"
+  }
+}

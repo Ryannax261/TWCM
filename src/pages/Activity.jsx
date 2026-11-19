@@ -1,22 +1,25 @@
 import { useParams } from 'react-router-dom'
-import { activities } from '../content.js'
+import { useTranslation } from 'react-i18next'
+import { useContent } from '../content.js'
 import { Wrap, Button, CardLink } from '../components/ui.jsx'
 import Reveal from '../components/Reveal.jsx'
 import PageHead from '../components/PageHead.jsx'
 import NotFound from './NotFound.jsx'
 
 export default function Activity() {
+  const { t } = useTranslation()
+  const { activities } = useContent()
   const a = activities.find((x) => x.slug === useParams().slug)
   if (!a) return <NotFound />
   const others = activities.filter((x) => x.slug !== a.slug)
   return (
     <>
-      <PageHead crumbs={[['Activités', '/activites'], [a.title]]} title={a.title} intro={a.intro} />
+      <PageHead crumbs={[[t('activities.crumb'), '/activites'], [a.title]]} title={a.title} intro={a.intro} />
 
       <Wrap className="grid gap-12 py-16 md:grid-cols-3">
         <div className="space-y-12 md:col-span-2">
           <section>
-            <Reveal><h2 className="text-2xl font-bold">Ce que nous faisons</h2></Reveal>
+            <Reveal><h2 className="text-2xl font-bold">{t('activity.whatWeDo')}</h2></Reveal>
             <ul className="mt-6 space-y-3">
               {a.points.map((p, i) => (
                 <Reveal as="li" key={p} delay={i * 100} className="flex items-start gap-3 rounded-xl border border-ink/10 p-4 transition hover:border-turmeric hover:shadow-md">
@@ -29,7 +32,7 @@ export default function Activity() {
 
           {a.steps.length > 0 && (
             <section>
-              <Reveal><h2 className="text-2xl font-bold">Notre méthode</h2></Reveal>
+              <Reveal><h2 className="text-2xl font-bold">{t('activity.method')}</h2></Reveal>
               <ol className="mt-6 border-l-2 border-turmeric/40">
                 {a.steps.map((s, i) => (
                   <Reveal as="li" key={s} delay={i * 100} className="relative pb-6 pl-8 last:pb-0">
@@ -44,8 +47,8 @@ export default function Activity() {
 
         <aside>
           <Reveal className="sticky top-28 rounded-3xl bg-ink p-7 text-white">
-            <p className="font-display text-2xl font-bold">Un projet en tête ?</p>
-            <p className="mt-2 text-white/75">Décrivez-nous votre besoin, nous revenons vers vous rapidement.</p>
+            <p className="font-display text-2xl font-bold">{t('activity.ctaTitle')}</p>
+            <p className="mt-2 text-white/75">{t('activity.ctaText')}</p>
             <div className="mt-6"><Button to={`/contact?besoin=${a.need}`} dark>{a.cta}</Button></div>
           </Reveal>
         </aside>
@@ -53,7 +56,7 @@ export default function Activity() {
 
       <section className="bg-mist">
         <Wrap className="py-16">
-          <Reveal><h2 className="text-2xl font-bold">Découvrir aussi</h2></Reveal>
+          <Reveal><h2 className="text-2xl font-bold">{t('activity.alsoDiscover')}</h2></Reveal>
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             {others.map((o, i) => (
               <Reveal key={o.slug} delay={i * 120}>

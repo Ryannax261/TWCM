@@ -1,22 +1,24 @@
-import { values } from '../content.js'
+import { useTranslation } from 'react-i18next'
+import { useContent } from '../content.js'
 import { Wrap } from '../components/ui.jsx'
 import Reveal from '../components/Reveal.jsx'
 import PageHead from '../components/PageHead.jsx'
 
-const zones = ['Maurice', 'Madagascar', 'Asie']
-
 export default function About() {
+  const { t } = useTranslation()
+  const { values } = useContent()
+  const zones = t('about.zones', { returnObjects: true })
   return (
     <>
-      <PageHead crumbs={[['À propos']]} title="Une société mauricienne tournée vers l’Asie et l’océan Indien" />
+      <PageHead crumbs={[[t('about.crumb')]]} title={t('about.title')} />
 
       <Wrap className="grid gap-10 py-16 md:grid-cols-2 md:items-center">
         <Reveal>
-          <h2 className="text-3xl font-bold">Qui sommes-nous</h2>
-          <p className="mt-4 text-lg text-ink/75">TWCM est une société de droit mauricien. Elle intervient dans le trading, le conseil en business et la distribution d’équipements électriques.</p>
+          <h2 className="text-3xl font-bold">{t('about.whoWeAre')}</h2>
+          <p className="mt-4 text-lg text-ink/75">{t('about.whoText')}</p>
         </Reveal>
         <Reveal delay={150}>
-          <p className="text-sm font-semibold uppercase tracking-widest text-ink/50">Zones d’intervention</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-ink/50">{t('about.zonesTitle')}</p>
           <ul className="mt-3 flex flex-wrap gap-3">
             {zones.map((z) => <li key={z} className="rounded-full bg-ink px-6 py-2.5 font-display text-lg font-bold text-white transition hover:bg-sea">{z}</li>)}
           </ul>
@@ -25,7 +27,7 @@ export default function About() {
 
       <section className="bg-mist">
         <Wrap className="py-16">
-          <Reveal><h2 className="text-3xl font-bold">Mission et valeurs</h2></Reveal>
+          <Reveal><h2 className="text-3xl font-bold">{t('about.missionValues')}</h2></Reveal>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {values.map((v, i) => (
               <Reveal key={v} delay={i * 120}>
@@ -41,8 +43,8 @@ export default function About() {
 
       <Wrap className="py-16">
         <Reveal>
-          <h2 className="text-3xl font-bold">Équipe dirigeante</h2>
-          <p className="mt-4 rounded-2xl border-2 border-dashed border-ink/20 p-8 text-ink/60">Photo, nom, fonction et courte biographie de chaque membre : à compléter.</p>
+          <h2 className="text-3xl font-bold">{t('about.team')}</h2>
+          <p className="mt-4 rounded-2xl border-2 border-dashed border-ink/20 p-8 text-ink/60">{t('about.teamTodo')}</p>
         </Reveal>
       </Wrap>
     </>

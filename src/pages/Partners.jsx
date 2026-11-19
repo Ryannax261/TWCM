@@ -1,12 +1,15 @@
-import { partners } from '../content.js'
+import { useTranslation } from 'react-i18next'
+import { useContent } from '../content.js'
 import { Wrap, Button } from '../components/ui.jsx'
 import Reveal from '../components/Reveal.jsx'
 import PageHead from '../components/PageHead.jsx'
 
 export default function Partners() {
+  const { t } = useTranslation()
+  const { partners } = useContent()
   return (
     <>
-      <PageHead crumbs={[['Partenaires']]} title="Nos partenaires" />
+      <PageHead crumbs={[[t('partners.crumb')]]} title={t('partners.title')} />
       <Wrap className="grid gap-6 py-16 md:grid-cols-2">
         {partners.map((p, i) => (
           <Reveal key={p.name} delay={i * 120}>
@@ -18,8 +21,8 @@ export default function Partners() {
         ))}
       </Wrap>
       <Wrap className="pb-20">
-        <p className="text-ink/80">Vous souhaitez devenir partenaire de TWCM ?</p>
-        <div className="mt-3"><Button to="/contact?besoin=Partenariat">Nous écrire</Button></div>
+        <p className="text-ink/80">{t('partners.become')}</p>
+        <div className="mt-3"><Button to="/contact?besoin=partenariat">{t('partners.writeUs')}</Button></div>
       </Wrap>
     </>
   )

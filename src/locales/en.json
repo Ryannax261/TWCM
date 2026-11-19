@@ -1,0 +1,288 @@
+{
+  "ui": {
+    "skip": "Skip to content",
+    "home": "Home",
+    "discover": "Learn more",
+    "contactUs": "Contact us",
+    "breadcrumb": "Breadcrumb",
+    "language": "Language"
+  },
+  "header": {
+    "logoLabel": "TWCM, home",
+    "tagline": " Asia · Mauritius · Madagascar",
+    "mainNav": "Main navigation",
+    "mobileNav": "Mobile navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "showPages": "Show {{label}} pages"
+  },
+  "footer": {
+    "about": "Mauritian company. Trading, consulting and distribution between Asia and the Indian Ocean.",
+    "talk": "Let’s talk about your project",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "legal": "Legal notice",
+    "privacy": "Privacy",
+    "top": "Back to top ↑"
+  },
+  "home": {
+    "title": "From the Asian factory to the <hl>Indian Ocean</hl> customer.",
+    "intro": "TWCM imports, advises and distributes between Asia, Mauritius and Madagascar. Our businesses:",
+    "words": [
+      "Trading",
+      "Consulting",
+      "Distribution"
+    ],
+    "ourActivities": "Our activities",
+    "threeTrades": "Three businesses, one point of contact",
+    "supplierToDelivery": "From supplier to delivery",
+    "why": "Why work with TWCM",
+    "achievements": "Projects",
+    "partners": "Our partners",
+    "letsTalk": "Let’s talk about your project",
+    "stepPrev": "Previous step",
+    "stepNext": "Next step",
+    "stepGo": "Go to step {{n}}"
+  },
+  "about": {
+    "crumb": "About",
+    "title": "A Mauritian company focused on Asia and the Indian Ocean",
+    "whoWeAre": "Who we are",
+    "whoText": "TWCM is a company incorporated under Mauritian law. It operates in trading, business consulting and the distribution of electrical equipment.",
+    "zonesTitle": "Areas of operation",
+    "zones": [
+      "Mauritius",
+      "Madagascar",
+      "Asia"
+    ],
+    "missionValues": "Mission and values",
+    "team": "Leadership team",
+    "teamTodo": "Photo, name, role and short biography of each member: to be completed."
+  },
+  "activities": {
+    "crumb": "Activities",
+    "title": "Our activities",
+    "intro": "Three complementary divisions, a single point of contact."
+  },
+  "activity": {
+    "whatWeDo": "What we do",
+    "method": "Our method",
+    "ctaTitle": "Have a project in mind?",
+    "ctaText": "Tell us what you need and we’ll get back to you quickly.",
+    "alsoDiscover": "Also discover"
+  },
+  "projects": {
+    "crumb": "Projects",
+    "title": "Our projects",
+    "all": "All",
+    "filterLabel": "Filter by division"
+  },
+  "project": {
+    "context": "Context",
+    "mission": "Mission",
+    "result": "Results",
+    "next": "Next project"
+  },
+  "partners": {
+    "crumb": "Partners",
+    "title": "Our partners",
+    "become": "Would you like to become a TWCM partner?",
+    "writeUs": "Write to us"
+  },
+  "contact": {
+    "crumb": "Contact",
+    "title": "Contact us",
+    "intro": "A question, a quote, a project: write to us.",
+    "eyebrow": "Write to us",
+    "heading": "Let’s talk about your project",
+    "sub": "A few lines are enough: we’ll come back to you with a tailored answer.",
+    "need": "Your need",
+    "name": "Name",
+    "company": "Company",
+    "country": "Country",
+    "message": "Message",
+    "placeholder": "Describe your need, quantities, deadlines…",
+    "privacy": "Your information is used only to answer your request.",
+    "send": "Send message",
+    "sent": "Your email app has opened to send the message.",
+    "mailSubject": "Website enquiry: {{need}}",
+    "mailName": "Name",
+    "mailCompany": "Company",
+    "mailCountry": "Country",
+    "mailNeed": "Need"
+  },
+  "legal": {
+    "legalTitle": "Legal notice",
+    "privacyTitle": "Privacy policy",
+    "todo": "Legal content to be completed: company name, registration number, registered office, website host and personal data processing."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "This address does not exist or has changed.",
+    "back": "Back to home"
+  },
+  "map": {
+    "aria": "Map: sea route from Asia to Mauritius, then Madagascar, across the Indian Ocean",
+    "ocean": "Indian Ocean",
+    "asia": "Asia",
+    "mauritius": "Mauritius",
+    "madagascar": "Madagascar"
+  },
+  "content": {
+    "nav": [
+      {
+        "to": "/",
+        "label": "Home"
+      },
+      {
+        "to": "/a-propos",
+        "label": "About"
+      },
+      {
+        "to": "/activites",
+        "label": "Activities"
+      },
+      {
+        "to": "/realisations",
+        "label": "Projects"
+      },
+      {
+        "to": "/partenaires",
+        "label": "Partners"
+      }
+    ],
+    "needs": [
+      {
+        "id": "trading",
+        "label": "Trading"
+      },
+      {
+        "id": "conseil",
+        "label": "Consulting"
+      },
+      {
+        "id": "distribution",
+        "label": "Distribution"
+      },
+      {
+        "id": "partenariat",
+        "label": "Partnership"
+      }
+    ],
+    "activities": [
+      {
+        "slug": "trading",
+        "title": "Trading",
+        "cta": "Request a quote",
+        "need": "trading",
+        "intro": "We buy in Asia and deliver across the Indian Ocean: vetted suppliers, negotiated prices, inspected goods.",
+        "points": [
+          "Specialised in Asia to Indian Ocean trade",
+          "Product families covered"
+        ],
+        "steps": [
+          "Supplier sourcing",
+          "Negotiation",
+          "Quality control",
+          "Logistics",
+          "Delivery"
+        ]
+      },
+      {
+        "slug": "conseil",
+        "title": "Business consulting",
+        "cta": "Book a meeting",
+        "need": "conseil",
+        "intro": "We support executives in organising their teams and running their projects.",
+        "points": [
+          "HR and management support",
+          "Project delivery: steering, monitoring, handover",
+          "Investment studies and project management"
+        ],
+        "steps": [
+          "Assessment",
+          "Action plan",
+          "Implementation",
+          "Follow-up"
+        ]
+      },
+      {
+        "slug": "distribution",
+        "title": "Electrical equipment distribution",
+        "cta": "Request an offer",
+        "need": "distribution",
+        "intro": "We supply electrical equipment to professionals, local authorities and project owners.",
+        "points": [
+          "Range of equipment offered",
+          "Brands distributed, including Holley Tech",
+          "Clients and areas served"
+        ],
+        "steps": []
+      }
+    ],
+    "projects": [
+      {
+        "slug": "electrification",
+        "title": "Electrification project",
+        "pole": "Business consulting",
+        "country": "Madagascar",
+        "context": "An electrification project needed a structured team and rigorous steering.",
+        "mission": "HR and management support, then project delivery.",
+        "result": "Results and photos to be added."
+      },
+      {
+        "slug": "madagascar",
+        "title": "Investment study in Madagascar",
+        "pole": "Business consulting",
+        "country": "Madagascar",
+        "context": "An investor wanted to assess setting up operations in Madagascar.",
+        "mission": "Investment study, then project management.",
+        "result": "Results to be added."
+      }
+    ],
+    "partners": [
+      {
+        "name": "Holley Tech",
+        "text": "Partner for electrical solutions and equipment."
+      },
+      {
+        "name": "Chines Company",
+        "text": "Industrial partner in China."
+      },
+      {
+        "name": "Top Level Management",
+        "text": "Senior executive or strategic company."
+      }
+    ],
+    "values": [
+      "Rigour in choosing suppliers",
+      "Transparency with our clients",
+      "Commitment through to delivery"
+    ],
+    "parcours": [
+      {
+        "title": "Supplier sourcing",
+        "text": "We identify the manufacturers and suppliers in Asia that fit your need."
+      },
+      {
+        "title": "Negotiation",
+        "text": "We negotiate prices, quantities and delivery terms on your behalf."
+      },
+      {
+        "title": "Quality control",
+        "text": "We check that the goods comply before they are shipped."
+      },
+      {
+        "title": "Logistics",
+        "text": "We organise transport and paperwork all the way to the Indian Ocean."
+      },
+      {
+        "title": "Delivery",
+        "text": "Your goods arrive at your door, in Mauritius or Madagascar."
+      }
+    ]
+  },
+  "whatsapp": {
+    "label": "Message us on WhatsApp"
+  }
+}

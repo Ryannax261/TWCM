@@ -1,5 +1,6 @@
 // Carte simplifiée : Asie, Maurice et Madagascar.
 // Le tracé des terres (très long) est rangé dans landPath.js.
+import { useTranslation } from 'react-i18next'
 import { LAND } from './landPath.js'
 
 const TURMERIC = '#E3A21A'
@@ -28,19 +29,20 @@ const halo = { stroke: '#10222E', strokeWidth: 2, paintOrder: 'stroke', strokeLi
 const label = { fill: '#FFFFFF', fontSize: 8, fontWeight: 600, ...halo }
 
 export default function RouteMap() {
+  const { t } = useTranslation()
   return (
     <svg
       viewBox="165 90 260 230"
       className="h-auto w-full"
       role="img"
-      aria-label="Carte : route maritime de l'Asie vers l'île Maurice, puis Madagascar, dans l'océan Indien"
+      aria-label={t('map.aria')}
     >
       {/* Terres émergées */}
       <path d={LAND} fill="#FFFFFF" fillOpacity="0.14" stroke="none" />
 
       {/* Océan Indien */}
       <text x="330" y="306" textAnchor="middle" fill="#FFFFFF" fillOpacity="0.5" fontSize="8" fontStyle="italic" letterSpacing="1.5">
-        Océan Indien
+        {t('map.ocean')}
       </text>
 
       {/* Routes : se dessinent l'une après l'autre (voir .route-line dans index.css) */}
@@ -53,9 +55,9 @@ export default function RouteMap() {
       <circle cx="214" cy="263" r="3.2" fill="#FFFFFF" stroke={TURMERIC} strokeWidth="1.6" />
 
       {/* Libellés */}
-      <text x="399" y="111" textAnchor="middle" {...label}>Asie</text>
-      <text x="249" y="279" textAnchor="start" {...label}>Maurice</text>
-      <text x="214" y="292" textAnchor="middle" {...label}>Madagascar</text>
+      <text x="399" y="111" textAnchor="middle" {...label}>{t('map.asia')}</text>
+      <text x="249" y="279" textAnchor="start" {...label}>{t('map.mauritius')}</text>
+      <text x="214" y="292" textAnchor="middle" {...label}>{t('map.madagascar')}</text>
     </svg>
   )
 }
